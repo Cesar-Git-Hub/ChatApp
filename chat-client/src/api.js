@@ -1,6 +1,10 @@
 const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 export const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
 
+if (import.meta.env.PROD && !import.meta.env.VITE_API_URL) {
+  console.error('VITE_API_URL is not set. The app will not reach the back-end.');
+}
+
 const TOKEN_KEY = 'chatapp_token';
 export const getToken = () => localStorage.getItem(TOKEN_KEY);
 export const setToken = (t) =>
