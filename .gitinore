@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+chat-client/node_modules/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# builds
+dist/
+chat-client/dist/
+build/
+
+# logs and OS/editor files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
